@@ -1,2 +1,1 @@
-# Template
-Default repository template.
+# Algoritmos e Lógica de Programação @ Curso em Vídeo
