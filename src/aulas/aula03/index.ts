@@ -5,15 +5,15 @@ var average: number | null;
 
 result = firstNumber + secondNumber;
 console.log(
-  "O resultado da soma entre " +
+  'O resultado da soma entre ' +
     firstNumber +
-    " e " +
+    ' e ' +
     secondNumber +
-    " é: " +
+    ' é: ' +
     result
 );
 
 average = (firstNumber + secondNumber) / 2;
 console.log(
-  "A média entre " + firstNumber + " e " + secondNumber + " é: " + average
+  'A média entre ' + firstNumber + ' e ' + secondNumber + ' é: ' + average
 );

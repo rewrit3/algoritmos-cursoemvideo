@@ -1,2 +1,2 @@
-import "./style.css";
-import "./aulas/aula04/index";
+import './style.css';
+import './aulas/aula06/index';

@@ -1,4 +1,4 @@
 var mensagem: string;
 
-mensagem = "Hello World!";
+mensagem = 'Hello World!';
 console.log(mensagem);
