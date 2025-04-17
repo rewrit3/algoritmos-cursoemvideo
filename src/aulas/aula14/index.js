@@ -80,9 +80,26 @@
 //   console.log(apenasLetraC[i] + '\n');
 // }
 
-// prática 3: ordenação do vetor
-const vetor = [];
+// exercício 1: torneio de futebol
 
-for (let i = 0; i < 4; i++) {
-  vetor[i] = parseInt(prompt('Digite um valor: '));
+console.log('----------------');
+console.log('TORNEIO DE FUTEBOL');
+console.log('----------------');
+
+const times = [];
+
+for (let i = 0; i < 3; i++) {
+  times[i] = prompt('Digite o nome do time: ');
+}
+
+console.clear();
+
+console.log('----------------');
+console.log('TABELA DE PARTIDAS');
+console.log('----------------');
+
+// console.log(times[0] + ' [] x [] ' + times[1]);
+
+for (let i = 0; i < 3; i++) {
+  console.log(times[i]);
 }
