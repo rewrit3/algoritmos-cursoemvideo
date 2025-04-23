@@ -81,38 +81,71 @@
 // }
 
 // exercício 1: torneio de futebol
-function criarTorneio(times) {
-  if (times.length !== 3) {
-    return 'O torneio precisa de 3 times.';
-  }
+// function criarTorneio(times) {
+//   if (times.length !== 3) {
+//     return 'O torneio precisa de 3 times.';
+//   }
 
-  const partidas = [];
-  const numeroTimes = times.length;
+//   const partidas = [];
+//   const numeroTimes = times.length;
 
-  // partidas de ida
-  for (let i = 0; i < numeroTimes; i++) {
-    for (let j = i + 1; j < numeroTimes; j++) {
-      partidas.push({ time1: times[i], time2: times[j] });
-    }
-  }
+//   // partidas de ida
+//   for (let i = 0; i < numeroTimes; i++) {
+//     for (let j = i + 1; j < numeroTimes; j++) {
+//       partidas.push({ time1: times[i], time2: times[j] });
+//     }
+//   }
   
-  // partidas de volta
-  for (let i = 0; i < numeroTimes; i++) {
-    for (let j = i + 1; j < numeroTimes; j++) {
-      partidas.push({ time1: times[j], time2: times[i] });
-    }
-  }
+//   // partidas de volta
+//   for (let i = 0; i < numeroTimes; i++) {
+//     for (let j = i + 1; j < numeroTimes; j++) {
+//       partidas.push({ time1: times[j], time2: times[i] });
+//     }
+//   }
 
-  return partidas;
+//   return partidas;
+// }
+
+// const times = ['Vasco', 'Flamengo', 'Botafogo'];
+// const tabela = criarTorneio(times);
+
+// console.log('------------------');
+// console.log('TABELA DE PARTIDAS');
+// console.log('------------------');
+
+// tabela.forEach((partida, index) => {
+//   console.log(`Partida ${index + 1}: ${partida.time1} [] x [] ${partida.time2}`);
+// });
+
+// exercício 2: corrigindo provas
+console.log('------------------------------');
+console.log('PASSO 1: CADASTRO DE GABARITO');
+console.log('------------------------------');
+
+const gabarito = [];
+const questoes = [];
+
+for (let i = 1; i < 6; i++) {
+  const respostasGabarito = prompt('Gabarito - Questão ' + i + ': ');
+
+  gabarito.push(respostasGabarito);
 }
 
-const times = ['Vasco', 'Flamengo', 'Botafogo'];
-const tabela = criarTorneio(times);
+console.log(gabarito);
 
-console.log('------------------');
-console.log('TABELA DE PARTIDAS');
-console.log('------------------');
+for (let i = 1; i < 3; i++) {
+  console.log('------------------------------');
+  console.log('ALUNO ' + i);
+  console.log('------------------------------');
 
-tabela.forEach((partida, index) => {
-  console.log(`Partida ${index + 1}: ${partida.time1} [] x [] ${partida.time2}`);
-});
+  const nomeAluno = prompt('Nome: ');
+  questoes.push(nomeAluno);
+
+  for (let j = 1; j < 6; j++) {
+    const respostasAluno = prompt('Aluno ' + i + ' - Questão ' + j + ': ');
+
+    questoes.push(respostasAluno);
+  }
+}
+
+console.log(questoes);
