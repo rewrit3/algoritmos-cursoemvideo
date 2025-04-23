@@ -81,25 +81,38 @@
 // }
 
 // exercício 1: torneio de futebol
+function criarTorneio(times) {
+  if (times.length !== 3) {
+    return 'O torneio precisa de 3 times.';
+  }
 
-console.log('----------------');
-console.log('TORNEIO DE FUTEBOL');
-console.log('----------------');
+  const partidas = [];
+  const numeroTimes = times.length;
 
-const times = [];
+  // partidas de ida
+  for (let i = 0; i < numeroTimes; i++) {
+    for (let j = i + 1; j < numeroTimes; j++) {
+      partidas.push({ time1: times[i], time2: times[j] });
+    }
+  }
+  
+  // partidas de volta
+  for (let i = 0; i < numeroTimes; i++) {
+    for (let j = i + 1; j < numeroTimes; j++) {
+      partidas.push({ time1: times[j], time2: times[i] });
+    }
+  }
 
-for (let i = 0; i < 3; i++) {
-  times[i] = prompt('Digite o nome do time: ');
+  return partidas;
 }
 
-console.clear();
+const times = ['Vasco', 'Flamengo', 'Botafogo'];
+const tabela = criarTorneio(times);
 
-console.log('----------------');
+console.log('------------------');
 console.log('TABELA DE PARTIDAS');
-console.log('----------------');
+console.log('------------------');
 
-// console.log(times[0] + ' [] x [] ' + times[1]);
-
-for (let i = 0; i < 3; i++) {
-  console.log(times[i]);
-}
+tabela.forEach((partida, index) => {
+  console.log(`Partida ${index + 1}: ${partida.time1} [] x [] ${partida.time2}`);
+});
