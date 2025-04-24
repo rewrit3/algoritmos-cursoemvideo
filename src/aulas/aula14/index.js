@@ -118,33 +118,33 @@
 // });
 
 // exercício 2: corrigindo provas
-console.log('------------------------------');
-console.log('PASSO 1: CADASTRO DE GABARITO');
-console.log('------------------------------');
+// console.log('------------------------------');
+// console.log('PASSO 1: CADASTRO DE GABARITO');
+// console.log('------------------------------');
 
-const gabarito = [];
-const questoes = [];
+// const gabarito = [];
+// const questoes = [];
 
-for (let i = 1; i < 4; i++) {
-  const respostasGabarito = prompt('Gabarito - Questão ' + i + ': ');
+// for (let i = 1; i < 4; i++) {
+//   const respostasGabarito = prompt('Gabarito - Questão ' + i + ': ');
 
-  gabarito.push(respostasGabarito);
-}
+//   gabarito.push(respostasGabarito);
+// }
 
-for (let i = 1; i < 3; i++) {
-  console.log('------------------------------');
-  console.log('ALUNO ' + i);
-  console.log('------------------------------');
+// for (let i = 1; i < 3; i++) {
+//   console.log('------------------------------');
+//   console.log('ALUNO ' + i);
+//   console.log('------------------------------');
 
-  const nomeAluno = prompt('Aluno ' + i + ' - Nome: ');
-  questoes.push(nomeAluno);
+//   const nomeAluno = prompt('Aluno ' + i + ' - Nome: ');
+//   questoes.push(nomeAluno);
 
-  for (let j = 1; j < 4; j++) {
-    const respostasAluno = prompt('Aluno ' + i + ' - Questão ' + j + ': ');
+//   for (let j = 1; j < 4; j++) {
+//     const respostasAluno = prompt('Aluno ' + i + ' - Questão ' + j + ': ');
 
-    questoes.push(respostasAluno);
-  }
-}
+//     questoes.push(respostasAluno);
+//   }
+// }
 
-console.log(gabarito);
-console.log(questoes);
+// console.log(gabarito);
+// console.log(questoes);
