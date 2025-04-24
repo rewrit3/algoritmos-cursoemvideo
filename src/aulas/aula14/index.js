@@ -125,27 +125,26 @@ console.log('------------------------------');
 const gabarito = [];
 const questoes = [];
 
-for (let i = 1; i < 6; i++) {
+for (let i = 1; i < 4; i++) {
   const respostasGabarito = prompt('Gabarito - Questão ' + i + ': ');
 
   gabarito.push(respostasGabarito);
 }
-
-console.log(gabarito);
 
 for (let i = 1; i < 3; i++) {
   console.log('------------------------------');
   console.log('ALUNO ' + i);
   console.log('------------------------------');
 
-  const nomeAluno = prompt('Nome: ');
+  const nomeAluno = prompt('Aluno ' + i + ' - Nome: ');
   questoes.push(nomeAluno);
 
-  for (let j = 1; j < 6; j++) {
+  for (let j = 1; j < 4; j++) {
     const respostasAluno = prompt('Aluno ' + i + ' - Questão ' + j + ': ');
 
     questoes.push(respostasAluno);
   }
 }
 
+console.log(gabarito);
 console.log(questoes);
