@@ -1,6 +1,6 @@
 <?php
 
-// exercício 2: corrigindo provas
+// exercício 1: corrigindo provas
 function clearConsole() {
   echo "\033[2J\033[;H";
 }
