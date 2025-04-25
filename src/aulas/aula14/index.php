@@ -1,37 +1,55 @@
 <?php
 
 // exercício 2: corrigindo provas
-echo '--------------------------------------------------' . '\\n';
-echo 'PASSO 1: CADASTRO DE GABARITO' . '\\n';
-echo '--------------------------------------------------' . '\\n';
+function clearConsole() {
+  echo "\033[2J\033[;H";
+}
+
+// passo 1: gabarito
+clearConsole();
+echo ("-----------------------------\n");
+echo ("PASSO 1: CADASTRO DE GABARITO\n");
+echo ("-----------------------------\n");
 
 $gabarito = [];
-$questoes = [];
 
-for ($i = 1; $i < 4; $i++):
-  $respostasGabarito = readline('Gabarito - Questão ' . $i . ' : ');
+for ($i = 1; $i <= 2; $i++):
+  $resposta = strtoupper(readline('Gabarito - Questão ' . $i . ' : '));
 
-// gabarito.push(respostasGabarito);
+  $gabarito[$i] = trim($resposta);
 endfor;
 
-echo '<pre>';
-var_dump($respostasGabarito);
-echo '</pre>';
+echo "\nGabarito cadastrado com sucesso!\n";
+sleep(1);
 
-// for (let i = 1; i < 3; i++) {
-//   console.log(' ------------------------------');
-  // console.log('ALUNO ' + i);
-//   console.log(' ------------------------------');
+// passo 2: respostas
+clearConsole();
+echo ("-----------------------------\n");
+echo ("PASSO 2: CADASTRO DE RESPOSTAS\n");
+echo ("-----------------------------\n");
 
-  // const nomeAluno=prompt('Aluno ' + i + ' - Nome: ');
-//   questoes.push(nomeAluno);
+$alunos = [];
+for ($j = 1; $j <= 2; $j++):
+  $nome = trim(readline("Aluno " . $j . " - Nome:\n"));
+  $respostas = [];
 
-//   for (let j = 1; j < 4; j++) {
-//     const respostasAluno = prompt(' Aluno ' + i + ' - Questão ' + j + ' : ');
+  for ($k = 1; $k <= 2; $k++):
+    $resposta = strtoupper(readline("Aluno - Questão " . $j . " : "));
 
-//     questoes.push(respostasAluno);
-//   }
-// }
+    $respostas[$k] = trim($resposta);
+  endfor;
 
-// console.log(gabarito);
-// console.log(questoes);
+  $alunos[$nome] = $respostas;
+
+  echo "\nRespostas de $nome cadastradas.\n";
+  sleep(1);
+endfor;
+
+echo "\nRespostas dos alunos cadastradas!\n";
+sleep(1);
+
+// passo 2: corrigir
+clearConsole();
+echo ("-----------------------------\n");
+echo ("PASSO 3: CORREÇÃO DAS PROVAS\n");
+echo ("-----------------------------\n");
