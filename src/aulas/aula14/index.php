@@ -48,8 +48,46 @@ endfor;
 echo "\nRespostas dos alunos cadastradas!\n";
 sleep(1);
 
-// passo 2: corrigir
+// passo 3: corrigir
 clearConsole();
 echo ("-----------------------------\n");
 echo ("PASSO 3: CORREÇÃO DAS PROVAS\n");
 echo ("-----------------------------\n");
+
+$notas = [];
+foreach ($alunos as $aluno => $respostas):
+  $nota = 0;
+
+  echo "\nCorrigindo a prova de $aluno:\n";
+
+  for ($questao = 1; $questao <= 2; $questao++):
+    if (isset($respostas[$questao]) and isset($gabarito[$questao])):
+      if ($respostas[$questao] === $gabarito[$questao]):
+        $nota++;
+
+        echo "  Questão $questao: Correta (Resposta: " . $respostas[$questao] . ")\n";
+      else:
+        echo "  Questão $questao: Incorreta (Sua resposta: " . $respostas[$questao] . ", Gabarito: " . $gabarito[$questao] . ")\n";
+      endif;
+    else:
+      echo "  Questão $questao: Resposta não encontrada.\n";
+    endif;
+  endfor;
+
+  $notas[$aluno] = $nota;
+
+  echo "Nota final de $aluno: $nota/2\n";
+  sleep(1);
+endforeach;
+
+// passo 4: notas
+// clearConsole();
+echo ("-----------------------------\n");
+echo ("PASSO 4: NOTAS FINAIS\n");
+echo ("-----------------------------\n");
+
+foreach ($notas as $aluno => $nota):
+  echo "$nome: $nota/2\n";
+endforeach;
+
+echo "-----------------------------------------\n";
